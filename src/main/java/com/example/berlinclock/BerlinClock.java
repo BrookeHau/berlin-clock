@@ -64,7 +64,7 @@ public class BerlinClock {
 			return "Y";
 		}
 		if (minutes >= 45 && lightNumber == 9) {
-			return "Y";
+			return "R";
 		}
 		if (minutes >= 40 && lightNumber == 8) {
 			return "Y";
@@ -73,7 +73,7 @@ public class BerlinClock {
 			return "Y";
 		}
 		if (minutes >= 30 && lightNumber == 6) {
-			return "Y";
+			return "R";
 		}
 		if (minutes >= 25 && lightNumber == 5) {
 			return "Y";
@@ -82,7 +82,7 @@ public class BerlinClock {
 			return "Y";
 		}
 		if (minutes >= 15 && lightNumber == 3) {
-			return "Y";
+			return "R";
 		}
 		if (minutes >= 10 && lightNumber == 2) {
 			return "Y";

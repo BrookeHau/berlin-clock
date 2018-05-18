@@ -98,13 +98,15 @@ public class BerlinTest {
 	}
 	@Test
 	public void testingMoreFromAbove() {
-		BerlinClock clock = new BerlinClock(4, 25, 1);
+		BerlinClock clock = new BerlinClock(4, 25, 2);
 		String lights = clock.topRowLightColor(4);
 		String light = clock.topRowLightColor(2);
 		String light2 = clock.secondRowLightColor(1);
+		String secs = clock.toplampColor();
 		assertThat(lights, is("O"));
 		assertThat(light, is("O"));
 		assertThat(light2, is("R"));
+		assertThat(secs, is("Y"));
 	}
 	
 	@Test
@@ -133,9 +135,11 @@ public class BerlinTest {
 		String light = clock.firstRowMinutesLightColor(1);
 		String light2 = clock.firstRowMinutesLightColor(2);
 		String light3 = clock.firstRowMinutesLightColor(4);
+		String test = clock.firstRowMinutesLightColor(3);		
 		String light4 = clock.secondRowMinutesLightColor(2);
 		assertThat(lights, is("R"));
 		assertThat(light, is("Y"));
+		assertThat(test, is("R"));
 		assertThat(light2, is("Y"));
 		assertThat(light3, is("O"));
 		assertThat(light4, is("O"));
@@ -147,6 +151,7 @@ public class BerlinTest {
 		String light = clock.firstRowMinutesLightColor(1);
 		String light2 = clock.firstRowMinutesLightColor(2);
 		String light3 = clock.firstRowMinutesLightColor(4);
+		String light9 = clock.firstRowMinutesLightColor(9);
 		String light4 = clock.secondRowMinutesLightColor(1);
 		String light5 = clock.secondRowMinutesLightColor(2);
 		assertThat(lights, is("R"));
@@ -154,6 +159,7 @@ public class BerlinTest {
 		assertThat(light2, is("Y"));
 		assertThat(light3, is("Y"));
 		assertThat(light4, is("Y"));
+		assertThat(light9, is("R"));
 		assertThat(light5, is("O"));
 	}
 	@Test
