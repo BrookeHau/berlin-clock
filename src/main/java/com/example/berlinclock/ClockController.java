@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ClockController {
 
-	@RequestMapping("/clock")
+	@RequestMapping("/index")
 	public String showClock() {
 		return "index";
 	}
